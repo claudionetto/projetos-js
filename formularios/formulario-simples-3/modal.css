@@ -1,0 +1,60 @@
+.modal{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    animation: modal 1s;
+}
+
+@keyframes modal{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+}
+
+.modal-content button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--color-white);
+    font-size: 1rem;
+    background-color: var(--color-purple1);
+    border: 2px solid var(--color-purple2);
+    transition: .3s;
+}
+
+.modal-content button:hover {
+    background-color: var(--color-purple2);
+    border: 2px solid var(--color-purple1);
+}
+
+.modal::backdrop{
+    background-color: indigo;
+    animation: modal-backdrop 1s;
+    opacity: .2;
+}
+
+@keyframes modal-backdrop{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}

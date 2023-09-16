@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <dialog id="modal" class="modal">
+      <div class="modal-content">
+        <p>Confirme seu email</p>
+        <button>Continuar</button>
+      </div>
+    </dialog>
+
+    <article class="form-box">
+      <form class="form" id="form">
+        <h1>Formulário 🔥</h1>
+        <div>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite seu nome"
+            class="inputs required"
+          />
+          <span class="span-required"
+            >Nome deve ter no mínimo 3 caracteres</span
+          >
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu melhor email"
+            class="inputs required"
+          />
+          <span class="span-required">Digite um email válido</span>
+        </div>
+        <div>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Senha"
+            class="inputs required"
+          />
+          <span class="span-required"
+            >Digite uma senha com no mínimo 8 caracteres</span
+          >
+        </div>
+
+        <div>
+          <input
+            type="password"
+            name="password-confirmation"
+            id="password-confirmation"
+            placeholder="Repita a sua senha"
+            class="inputs required"
+          />
+          <span class="span-required">As senhas precisam ser compatíveis</span>
+        </div>
+        <textarea
+          name="about"
+          id="about"
+          cols="30"
+          rows="5"
+          class="inputs"
+          placeholder="Fale um pouco sobre você..."
+        ></textarea>
+        <fieldset>
+          <legend>Sexo:</legend>
+          <div class="radio">
+            <input type="radio" name="gender" id="masc" value="masc" />
+            <label for="masc">Masculino</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="gender" id="femi" value="femi" />
+            <label for="femi">Feminino</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="gender" id="other" value="other" />
+            <label for="other">Outro</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Quais suas experiencias ?</legend>
+          <div class="checkbox">
+            <input type="checkbox" name="html" id="html" value="html" />
+            <label for="html">HTML</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="css" id="css" value="css" />
+            <label for="css">Css</label>
+          </div>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              name="javascript"
+              id="javascript"
+              value="javascript"
+            />
+            <label for="javascript">JavaScript</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="php" id="php" value="php" />
+            <label for="php">PHP</label>
+          </div>
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </article>
+  </body>
+</html>
