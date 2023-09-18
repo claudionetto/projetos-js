@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: aliceblue;
+}
+
+form {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  gap: 60px;
+  background-color: white;
+}
+
+label {
+  position: relative;
+}
+
+label span {
+  color: gray;
+  font-size: 1rem;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  transition: 0.3s;
+}
+
+.active {
+  bottom: 28px;
+  scale: 0.95;
+}
+
+label input {
+  font-size: 1rem;
+  border: 0;
+  outline: none;
+  padding: 5px;
+  border-bottom: 2px solid gray;
+  width: 100%;
+}
+
+/* Estilo personalizado quando o campo é preenchido automaticamente */
+label input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset; /* Define a cor de fundo desejada */
+}
+
+/* Estilo personalizado para a seleção dentro do campo preenchido automaticamente */
+label input:-webkit-autofill-selection {
+  background-color: #66afe9; /* Define a cor de fundo da seleção */
+}
+
+form button {
+  height: 60px;
+  border-radius: 20px;
+  background-color: rgb(92, 24, 226);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+.loading {
+  width: 35px;
+  height: 35px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
